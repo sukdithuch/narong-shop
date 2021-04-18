@@ -1,12 +1,12 @@
 import React from "react";
 
 function Category(props) {
-  const { searchText, handleChange, button, filter } = props;
+  const { button, filter } = props;
 
   return (
-    <div>
-      <h1>Category</h1>
-      <div>
+    <div className="Category">
+      <h3>หมวดหมู่สินค้า</h3>
+      {/* <div>
         ค้นหา{" "}
         <input
           style={{ marginLeft: 5 }}
@@ -15,7 +15,7 @@ function Category(props) {
           value={searchText}
           onChange={(e) => handleChange(e.target.value)}
         />
-      </div>
+      </div> */}
 
       <div className="list-group">
         {button.map((cat, i) => {
@@ -24,7 +24,7 @@ function Category(props) {
               key={i}
               type="button"
               onClick={() => filter(cat)}
-              className="btn"
+              className="list-group-item list-group-item-action list-group-item-dark"
             >
               {cat}
             </button>
