@@ -4,9 +4,8 @@ import Product from "./Product";
 function ProductShow(props) {
     const { datas } = props;
   return (
-    <div>
-      <h1>ProductShow</h1>
-      <div className="row">
+    <div className="ProductShow">
+      <div className="row row-col-sm-3">
         {datas.map((product) => (
           <Product key={product.id} product={product}></Product>
         ))}

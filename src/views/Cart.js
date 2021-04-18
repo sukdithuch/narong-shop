@@ -8,8 +8,8 @@ function Cart(props) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
-    <div>
-      <h1>Cart</h1>
+    <div className="Cart container-xxl">
+      <h1>ตะกร้าสินค้า</h1>
       <div>
         {cartItems.length === 0 && <div>ยังไม่มีสินค้า</div>}
         {cartItems.map((item) => (
@@ -57,8 +57,9 @@ function Cart(props) {
               </div>
             </div>
             <hr />
-            <div className="row">
-              <button onClick={() => alert("ต้องการสั่งซื้อใช่หรือไม่")}>
+            <div className="btn p-0">
+              <button 
+               onClick={() => alert("ต้องการสั่งซื้อใช่หรือไม่")}>
                 สั่งซื้อ
               </button>
             </div>

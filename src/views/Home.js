@@ -9,15 +9,12 @@ function Home(props) {
  
 
   return (
-    <div>
-      <h1>Home</h1>
-      <div>
-        <SlideProduct />
-      </div>
-      <div>
+    <div className="Home container-xxl">
+      <div className="side">
         <Category searchText={searchText} handleChange={handleChange} button={button} filter={filter}></Category>
       </div>
-      <div>
+      <div className="main">
+        <SlideProduct />
         <ProductShow datas={datas} ></ProductShow>
       </div>
     </div>
